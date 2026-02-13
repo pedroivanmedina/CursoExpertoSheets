@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende Google Sheets desde cero. Curso práctico de 3 sesiones con automatización, fórmulas avanzadas y dashboards profesionales. Certificado incluido. Inscríbete hoy por $999 MXN.">
+    <meta name="keywords" content="curso google sheets, aprender sheets, google sheets méxico, curso hojas de cálculo, automatización sheets">
     <title>Curso Experto en Google Sheets | Domina las Hojas de Cálculo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Analytics - REEMPLAZA 'G-XXXXXXXXXX' con tu ID real -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
     <style>
         :root {
-            --primary: #0f9d58; /* Verde Google Sheets */
+            --primary: #0f9d58;
             --dark: #0f172a;
             --light: #f8fafc;
-            --accent: #f59e0b; /* Naranja para CTA */
+            --accent: #f59e0b;
             --text-gray: #334155;
+            --red: #ef4444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
-            margin: 0;
-            padding: 0;
             color: var(--text-gray);
             line-height: 1.6;
             overflow-x: hidden;
@@ -34,6 +51,7 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
         }
 
         .logo-container img {
@@ -71,9 +89,87 @@
             background-position: center;
         }
 
-        h1 { font-size: 3rem; margin-bottom: 10px; line-height: 1.2; }
+        h1 { 
+            font-size: 3rem; 
+            margin-bottom: 10px; 
+            line-height: 1.2; 
+        }
+        
         .highlight { color: var(--primary); }
-        .subheadline { font-size: 1.5rem; max-width: 800px; margin: 0 auto 30px auto; opacity: 0.9; }
+        
+        .subheadline { 
+            font-size: 1.5rem; 
+            max-width: 800px; 
+            margin: 0 auto 30px auto; 
+            opacity: 0.9; 
+        }
+
+        /* VALUE PROPOSITION BOX - NUEVO */
+        .value-prop-box {
+            background: linear-gradient(135deg, #0f9d58 0%, #0c7d46 100%);
+            border-radius: 15px;
+            padding: 25px;
+            max-width: 700px;
+            margin: 30px auto;
+            box-shadow: 0 10px 40px rgba(15, 157, 88, 0.3);
+        }
+
+        .value-prop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .value-item {
+            text-align: center;
+        }
+
+        .value-item .icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .value-item strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .value-item p {
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+
+        .price-highlight {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 2px dashed rgba(255,255,255,0.5);
+        }
+
+        .price-highlight .old-price {
+            text-decoration: line-through;
+            opacity: 0.7;
+            font-size: 1.2rem;
+        }
+
+        .price-highlight .new-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fbbf24;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .price-highlight .urgency-text {
+            font-size: 0.95rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
         .cta-button {
             background-color: var(--primary);
@@ -87,29 +183,56 @@
             display: inline-block;
             box-shadow: 0 4px 15px rgba(15, 157, 88, 0.4);
             max-width: 90%;
-            box-sizing: border-box;
+            cursor: pointer;
         }
 
-        .cta-button:hover { transform: scale(1.05); background-color: #0c7d46; }
+        .cta-button:hover { 
+            transform: scale(1.05); 
+            background-color: #0c7d46; 
+        }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        /* Evento de tracking */
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 60px 20px; 
+        }
 
         /* Pain Points */
-        .pain-section { background-color: #fff; text-align: center; }
+        .pain-section { 
+            background-color: #fff; 
+            text-align: center; 
+        }
+        
         .pain-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
+        
         .pain-card {
             background: #fff;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-top: 5px solid #ef4444;
+            border-top: 5px solid var(--red);
+            transition: transform 0.3s;
         }
-        .pain-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+
+        .pain-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .pain-icon { 
+            font-size: 2.5rem; 
+            margin-bottom: 15px; 
+            display: block; 
+        }
 
         /* --- Sección de Videos --- */
         .video-section {
@@ -128,31 +251,41 @@
             margin: 30px auto 0 auto;
         }
 
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+        }
+
         .video-container {
             background: #000;
             aspect-ratio: 16/9;
-            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
 
-        .video-container iframe { width: 100%; height: 100%; border: none; }
+        .video-container iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+        }
 
-        .channel-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 10px;
-            color: var(--primary);
+        .video-title {
+            padding: 15px;
             font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s;
+            color: var(--text-gray);
+            background: white;
         }
-
-        .channel-link:hover { color: #0c7d46; }
 
         /* --- Benefits / Solution --- */
-        .solution-section { background-color: var(--light); }
+        .solution-section { 
+            background-color: var(--light); 
+        }
         
         .benefit-item { 
             display: flex; 
@@ -163,6 +296,7 @@
         .benefit-item h3 {
             margin-top: 0; 
             margin-bottom: 10px;
+            color: var(--dark);
         }
 
         .check-icon { 
@@ -179,10 +313,51 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
-        .module { background: white; border: 1px solid #e2e8f0; padding: 25px; border-radius: 8px; }
+        
+        .module { 
+            background: white; 
+            border: 1px solid #e2e8f0; 
+            padding: 25px; 
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
 
-        /* Instructor */
-        .instructor-section { background-color: var(--dark); color: white; padding: 60px 20px; }
+        .module:hover {
+            border-color: var(--primary);
+            box-shadow: 0 5px 20px rgba(15, 157, 88, 0.1);
+        }
+
+        .module h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .module ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .module li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .module li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* INSTRUCTOR SECTION - MEJORADA */
+        .instructor-section { 
+            background-color: var(--dark); 
+            color: white; 
+            padding: 60px 20px; 
+        }
+        
         .instructor-flex-container {
             display: flex;
             align-items: center;
@@ -191,7 +366,40 @@
             max-width: 900px;
             margin: 0 auto;
         }
-        .qr-wrapper img { width: 150px; height: 150px; border-radius: 10px; border: 4px solid white; background: white; }
+        
+        .qr-wrapper img { 
+            width: 150px; 
+            height: 150px; 
+            border-radius: 10px; 
+            border: 4px solid white; 
+            background: white; 
+        }
+
+        .instructor-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
         
         .wa-direct-link {
             display: inline-flex;
@@ -202,7 +410,7 @@
             font-weight: bold;
             text-decoration: none;
             font-size: 1.1rem;
-            padding: 8px 16px;
+            padding: 12px 24px;
             border: 2px solid #25D366;
             border-radius: 50px;
             transition: all 0.3s;
@@ -213,21 +421,172 @@
             color: white;
         }
 
+        /* FAQ SECTION - NUEVA */
+        .faq-section {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #f8fafc;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--dark);
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #e2e8f0;
+        }
+
+        .faq-question i {
+            color: var(--primary);
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px 20px;
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* URGENCY BOX - NUEVA */
+        .urgency-section {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .urgency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .urgency-item {
+            background: rgba(255,255,255,0.15);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .urgency-item .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .urgency-item strong {
+            display: block;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        /* LEAD MAGNET - NUEVO */
+        .lead-magnet-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .magnet-box {
+            background: rgba(255,255,255,0.1);
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid rgba(15, 157, 88, 0.3);
+        }
+
+        .magnet-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            background: var(--primary);
+            color: white;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .download-button:hover {
+            background: #0c7d46;
+            transform: scale(1.05);
+        }
+
         /* Final CTA */
         .final-cta {
             text-align: center;
             padding: 80px 20px;
+            background: var(--light);
+        }
+
+        .final-cta h2 {
+            color: var(--dark);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
         /* Portfolio / Recursos */
-        .portfolio-section { background-color: #fff; padding: 50px 20px; border-top: 1px solid #e2e8f0; }
-        .portfolio-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px; }
+        .portfolio-section { 
+            background-color: #fff; 
+            padding: 50px 20px; 
+            border-top: 1px solid #e2e8f0; 
+        }
+        
+        .portfolio-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 15px; 
+            margin-top: 20px; 
+        }
+        
         .portfolio-link {
-            padding: 10px 20px;
-            border: 1px solid var(--primary);
+            padding: 12px 24px;
+            border: 2px solid var(--primary);
             color: var(--primary);
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             font-weight: 600;
             transition: all 0.3s;
         }
@@ -237,30 +596,98 @@
             color: white;
         }
 
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
         /* Media Queries */
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
-            .navbar { flex-direction: column; gap: 15px; text-align: center; }
-            .logo-container img { margin: 0 auto; max-width: 280px; }
-            .instructor-flex-container { flex-direction: column; text-align: center; }
-            .benefit-item { text-align: left; }
+            .navbar { 
+                flex-direction: column; 
+                gap: 15px; 
+                text-align: center; 
+            }
+            .logo-container img { 
+                margin: 0 auto; 
+                max-width: 280px; 
+            }
+            .instructor-flex-container { 
+                flex-direction: column; 
+                text-align: center; 
+            }
+            .benefit-item { 
+                text-align: left; 
+            }
+            .value-prop-grid {
+                grid-template-columns: 1fr;
+            }
+            .urgency-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="logo-container"><img src="logo.jpeg" alt="Logo Marca"></div>
+    <div class="logo-container">
+        <img src="logo.jpeg" alt="Curso Experto Google Sheets - Aprende hojas de cálculo profesionales">
+    </div>
     <div class="nav-links">
-        <a href="https://claude.ai/public/artifacts/4a7d379b-55f1-4b1a-9d23-88ea8dd180cd" target="_blank"><i class="fas fa-file-user"></i> Mi CV</a>
-        <a href="https://wa.me/message/JG7VSAITBDBVO1" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i> Contacto</a>
+        <a href="https://claude.ai/public/artifacts/4a7d379b-55f1-4b1a-9d23-88ea8dd180cd" target="_blank">
+            <i class="fas fa-file-user"></i> Mi CV
+        </a>
+        <a href="https://wa.me/message/JG7VSAITBDBVO1" target="_blank" style="color: #25D366;" onclick="trackEvent('click', 'whatsapp_nav', 'navigation')">
+            <i class="fab fa-whatsapp"></i> Contacto
+        </a>
     </div>
 </nav>
 
 <header>
     <h1>Deja de usar Excel.<br>Domina <span class="highlight">Google Sheets</span> como un profesional.</h1>
     <p class="subheadline">Transforma datos en decisiones. Convierte hojas de cálculo básicas en herramientas empresariales que automatizan, analizan y multiplican tu productividad.</p>
-    <a href="#registro" class="cta-button">QUIERO DOMINAR GOOGLE SHEETS AHORA</a>
+    
+    <!-- VALUE PROPOSITION BOX - NUEVO -->
+    <div class="value-prop-box">
+        <div class="value-prop-grid">
+            <div class="value-item">
+                <span class="icon">📅</span>
+                <strong>3 Sesiones</strong>
+                <p>En vivo de 1:30 hrs</p>
+            </div>
+            <div class="value-item">
+                <span class="icon">🎯</span>
+                <strong>100% Práctico</strong>
+                <p>Con ejercicios reales</p>
+            </div>
+            <div class="value-item">
+                <span class="icon">🏆</span>
+                <strong>Certificado</strong>
+                <p>Al finalizar el curso</p>
+            </div>
+            <div class="value-item">
+                <span class="icon">💬</span>
+                <strong>Grupo WhatsApp</strong>
+                <p>Soporte permanente</p>
+            </div>
+        </div>
+        
+        <div class="price-highlight">
+            <span class="old-price">$1,250 MXN + IVA</span>
+            <span class="new-price">$999 MXN</span>
+            <span class="urgency-text">🔥 Solo pagando HOY</span>
+        </div>
+    </div>
+    
+    <a href="#registro" class="cta-button" onclick="trackEvent('click', 'cta_hero', 'hero_section')">
+        QUIERO DOMINAR GOOGLE SHEETS AHORA
+    </a>
 </header>
 
 <div class="pain-section">
@@ -288,16 +715,26 @@
 
 <div class="video-section">
     <div class="container">
-        <h2 style="color: var(--dark); font-size: 2rem; margin-bottom: 30px;">Clases y Demostraciones</h2>
+        <h2 style="color: var(--dark); font-size: 2rem; margin-bottom: 10px;">Clases y Demostraciones</h2>
+        <p style="color: var(--text-gray); margin-bottom: 30px;">Mira ejemplos reales de lo que aprenderás</p>
         <div class="video-grid">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/quuoH-Kw6lM" allowfullscreen></iframe>
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/quuoH-Kw6lM" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <p class="video-title">📊 Introducción a Google Sheets</p>
             </div>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/5dfNyS5z_X0" allowfullscreen></iframe>
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/5dfNyS5z_X0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <p class="video-title">🔧 Fórmulas Avanzadas en Acción</p>
             </div>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/qe0WKItwhNU" allowfullscreen></iframe>
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/qe0WKItwhNU" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <p class="video-title">⚡ Automatización con Macros</p>
             </div>
         </div>
     </div>
@@ -340,10 +777,10 @@
 </div>
 
 <div class="container">
-    <h2 style="text-align: center; margin-bottom: 40px;">Tu Ruta de Aprendizaje (3 Sesiones Prácticas)</h2>
+    <h2 style="text-align: center; margin-bottom: 40px; color: var(--dark);">Tu Ruta de Aprendizaje (3 Sesiones Prácticas)</h2>
     <div class="syllabus-grid">
         <div class="module">
-            <h3>📋 Sesión 1</h3>
+            <h3>📋 Sesión 1: Fundamentos</h3>
             <ul>
                 <li>Manejo de archivos (Importar, Compartir, Publicar)</li>
                 <li>Inmovilizar filas, formato y diseño profesional</li>
@@ -353,7 +790,7 @@
             </ul>
         </div>
         <div class="module">
-            <h3>🔧 Sesión 2</h3>
+            <h3>🔧 Sesión 2: Fórmulas Poderosas</h3>
             <ul>
                 <li>Funciones esenciales: SUMA, PROMEDIO, MAX, MIN</li>
                 <li>Manipulación de texto: SPLIT, JOIN, MAYUSCULAS</li>
@@ -363,7 +800,7 @@
             </ul>
         </div>
         <div class="module">
-            <h3>🚀 Sesión 3</h3>
+            <h3>🚀 Sesión 3: Nivel Experto</h3>
             <ul>
                 <li>FILTER, SPARKLINE para visualización rápida</li>
                 <li>IMPORTRANGE para conectar hojas</li>
@@ -375,39 +812,245 @@
     </div>
 </div>
 
+<!-- INSTRUCTOR SECTION MEJORADA -->
 <div class="instructor-section">
     <div class="container">
         <div class="instructor-flex-container">
-            <div class="qr-wrapper"><img src="qr.png" alt="QR"></div>
+            <div class="qr-wrapper">
+                <img src="qr.png" alt="Código QR contacto Pedro Medina">
+            </div>
             <div class="instructor-info">
                 <h2>Tu Instructor: Pedro Medina</h2>
                 <p>Ingeniero en Sistemas con Maestrías en Negocios y Productividad. Pedro no te enseñará teoría aburrida; te enseñará cómo él usa Google Sheets para automatizar procesos, analizar datos y gestionar negocios reales con eficiencia máxima.</p>
-                <a href="https://wa.me/message/JG7VSAITBDBVO1" class="wa-direct-link" target="_blank"><i class="fab fa-whatsapp"></i> Hablar con Pedro</a>
+                
+                <!-- ESTADÍSTICAS DEL INSTRUCTOR -->
+                <div class="instructor-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Cursos Impartidos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">En Vivo + Grabado</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100 días</span>
+                        <span class="stat-label">Acceso a Grabaciones</span>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/message/JG7VSAITBDBVO1" class="wa-direct-link" target="_blank" onclick="trackEvent('click', 'whatsapp_instructor', 'instructor_section')">
+                    <i class="fab fa-whatsapp"></i> Hablar con Pedro
+                </a>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ SECTION - NUEVA -->
+<div class="faq-section">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 40px; color: var(--dark);">Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Necesito conocimientos previos?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí, el curso está diseñado para quienes ya usan Excel y quieren migrar o complementar con Google Sheets. Si sabes usar fórmulas básicas en Excel, este curso es perfecto para ti.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Es grabado o en vivo?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Las sesiones son EN VIVO online para que puedas hacer preguntas en tiempo real. Además, todas las clases se graban y tienes acceso a las grabaciones por 100 días.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Funciona para mi industria?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>¡Sí! Google Sheets es una herramienta universal. Ya sea que trabajes en ventas, finanzas, marketing, operaciones, educación o cualquier área que maneje datos, estas habilidades te servirán.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Qué incluye el curso?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>3 sesiones en vivo de 1:30 horas cada una, acceso al grupo de WhatsApp para resolver dudas, grabaciones por 100 días, ejercicios prácticos y certificado digital al finalizar.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Cuándo inician las clases?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Las fechas se coordinan con el grupo inscrito para asegurar la máxima participación. Al registrarte, recibirás el calendario completo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- URGENCY SECTION - NUEVA -->
+<div class="urgency-section">
+    <div class="container">
+        <h2 style="font-size: 2.2rem; margin-bottom: 15px;">🎯 Próximo Curso: Experto ChatGPT</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 30px;">Marzo 2026 - Cupo limitado</p>
+        
+        <div class="urgency-grid">
+            <div class="urgency-item">
+                <span class="icon">🎁</span>
+                <strong>Precio Especial HOY</strong>
+                <p>Paga solo $999 MXN<br>(Precio regular $1,250 + IVA)</p>
+            </div>
+            <div class="urgency-item">
+                <span class="icon">👥</span>
+                <strong>Cupo Limitado</strong>
+                <p>Inscríbete ahora para<br>garantizar tu lugar</p>
+            </div>
+            <div class="urgency-item">
+                <span class="icon">⏰</span>
+                <strong>Oferta por Tiempo Limitado</strong>
+                <p>El precio aumenta<br>mañana a $1,250</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- LEAD MAGNET SECTION - NUEVA -->
+<div class="lead-magnet-section">
+    <div class="container">
+        <h2 style="font-size: 2rem; margin-bottom: 20px;">🎁 Bonus Gratuito</h2>
+        <div class="magnet-box">
+            <div class="magnet-icon">📥</div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Guía de las 10 Fórmulas Esenciales</h3>
+            <p style="margin-bottom: 20px;">Descarga gratis la guía que todo profesional necesita para empezar a dominar Google Sheets. Incluye ejemplos prácticos y plantillas listas para usar.</p>
+            <a href="#" class="download-button" onclick="alert('Esta función se implementará próximamente. Por ahora contáctanos por WhatsApp.'); trackEvent('click', 'lead_magnet', 'download_button'); return false;">
+                DESCARGAR GUÍA GRATIS
+            </a>
+            <p style="font-size: 0.85rem; margin-top: 15px; opacity: 0.8;">* Próximamente disponible</p>
         </div>
     </div>
 </div>
 
 <div class="final-cta" id="registro">
     <h2>Los datos son el nuevo petróleo.</h2>
-    <p style="font-size: 1.2rem; margin-bottom: 30px;">Quien domina las herramientas para <strong>analizarlos y automatizarlos</strong> tiene una ventaja competitiva imbatible.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSemYuen_Rb1M5556Z8oSoSyXLbXAgB7Ohij6jSbpkmbxUJY7w/viewform" class="cta-button" style="background-color: var(--accent);">APARTAR MI LUGAR AHORA</a>
-    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Garantía de satisfacción. Cupo limitado para atención personalizada.</p>
+    <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Quien domina las herramientas para <strong>analizarlos y automatizarlos</strong> tiene una ventaja competitiva imbatible.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSemYuen_Rb1M5556Z8oSoSyXLbXAgB7Ohij6jSbpkmbxUJY7w/viewform" class="cta-button" style="background-color: var(--accent);" onclick="trackEvent('click', 'cta_final', 'registration_section')">
+        APARTAR MI LUGAR AHORA - $999 MXN
+    </a>
+    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">✓ Garantía de satisfacción &nbsp;|&nbsp; ✓ Cupo limitado &nbsp;|&nbsp; ✓ Grupo WhatsApp incluido</p>
 </div>
 
 <div class="portfolio-section">
     <div class="container">
-        <h3 style="text-align: center; color: var(--text-gray); margin-bottom: 25px;">Recursos adicionales</h3>
+        <h3 style="text-align: center; color: var(--text-gray); margin-bottom: 25px;">Recursos Adicionales</h3>
         <div class="portfolio-grid">
-            <a href="https://claude.ai/public/artifacts/36b7abf0-70e0-47e6-a4b7-871bdfb0b8dd" class="portfolio-link">Contenido temático</a>
-            <a href="https://claude.ai/public/artifacts/594c90da-6b07-4cb5-a9a8-fc4e7efa8415" class="portfolio-link">Problema y necesidades</a>
+            <a href="https://claude.ai/public/artifacts/36b7abf0-70e0-47e6-a4b7-871bdfb0b8dd" class="portfolio-link" target="_blank" onclick="trackEvent('click', 'resource_content', 'resources_section')">
+                📚 Contenido Temático
+            </a>
+            <a href="https://claude.ai/public/artifacts/594c90da-6b07-4cb5-a9a8-fc4e7efa8415" class="portfolio-link" target="_blank" onclick="trackEvent('click', 'resource_problems', 'resources_section')">
+                🎯 Problema y Necesidades
+            </a>
         </div>
     </div>
 </div>
 
-<footer style="background: #eee; text-align: center; padding: 20px; font-size: 0.8rem;">
-    <p>&copy; 2025 Curso Experto en Google Sheets. Todos los derechos reservados.</p>
+<footer>
+    <p>&copy; 2025 Curso Experto en Google Sheets | Todos los derechos reservados</p>
+    <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8;">
+        Culiacán, Sinaloa, México | 
+        <a href="https://wa.me/message/JG7VSAITBDBVO1" style="color: #25D366; text-decoration: none;">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+    </p>
 </footer>
+
+<!-- JAVASCRIPT PARA FAQ Y TRACKING -->
+<script>
+    // Toggle FAQ
+    function toggleFAQ(element) {
+        const faqItem = element.parentElement;
+        const allFaqs = document.querySelectorAll('.faq-item');
+        
+        // Cerrar otros FAQs
+        allFaqs.forEach(item => {
+            if (item !== faqItem) {
+                item.classList.remove('active');
+            }
+        });
+        
+        // Toggle actual
+        faqItem.classList.toggle('active');
+        
+        // Track evento
+        if (faqItem.classList.contains('active')) {
+            trackEvent('expand', 'faq', element.querySelector('span').textContent);
+        }
+    }
+
+    // Función de tracking de eventos
+    function trackEvent(action, category, label) {
+        // Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', action, {
+                'event_category': category,
+                'event_label': label
+            });
+        }
+        
+        // Consola para debug
+        console.log('Event tracked:', action, category, label);
+        
+        // Aquí puedes agregar otros trackers (Facebook Pixel, etc.)
+    }
+
+    // Track scroll depth
+    let scrollTracked = {
+        25: false,
+        50: false,
+        75: false,
+        100: false
+    };
+
+    window.addEventListener('scroll', function() {
+        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        
+        Object.keys(scrollTracked).forEach(function(key) {
+            if (scrollPercent >= parseInt(key) && !scrollTracked[key]) {
+                trackEvent('scroll', 'scroll_depth', key + '%');
+                scrollTracked[key] = true;
+            }
+        });
+    });
+
+    // Track time on page
+    let timeOnPage = 0;
+    setInterval(function() {
+        timeOnPage += 10;
+        if (timeOnPage === 30) {
+            trackEvent('engagement', 'time_on_page', '30_seconds');
+        } else if (timeOnPage === 60) {
+            trackEvent('engagement', 'time_on_page', '1_minute');
+        } else if (timeOnPage === 120) {
+            trackEvent('engagement', 'time_on_page', '2_minutes');
+        }
+    }, 10000); // Cada 10 segundos
+</script>
 
 </body>
 </html>

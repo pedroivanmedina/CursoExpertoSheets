@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aprende Google Sheets desde cero. Curso práctico de 3 sesiones con automatización, fórmulas avanzadas y dashboards profesionales. Diploma incluido. Inscríbete hoy por $999 MXN.">
+    <meta name="description" content="Aprende Google Sheets desde cero. Curso práctico de 3 sesiones con automatización, fórmulas avanzadas y dashboards profesionales. Certificado incluido. Inscríbete hoy por $999 MXN.">
     <meta name="keywords" content="curso google sheets, aprender sheets, google sheets méxico, curso hojas de cálculo, automatización sheets">
     <title>Curso Experto en Google Sheets | Domina las Hojas de Cálculo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -104,7 +104,7 @@
             opacity: 0.9; 
         }
 
-        /* VALUE PROPOSITION BOX - NUEVO */
+        /* VALUE PROPOSITION BOX */
         .value-prop-box {
             background: linear-gradient(135deg, #0f9d58 0%, #0c7d46 100%);
             border-radius: 15px;
@@ -171,8 +171,193 @@
             letter-spacing: 1px;
         }
 
+        /* COURSE INFO BOX - NUEVO */
+        .course-info-box {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 2px solid var(--primary);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 700px;
+            margin: 30px auto;
+            box-shadow: 0 10px 40px rgba(15, 157, 88, 0.2);
+        }
+
+        .course-info-box h3 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .course-dates {
+            display: grid;
+            gap: 20px;
+        }
+
+        .date-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s;
+        }
+
+        .date-item:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateX(5px);
+        }
+
+        .date-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .date-details {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: white;
+        }
+
+        .date-details strong {
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .date-details span {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* COUNTDOWN TIMER - NUEVO */
+        .countdown-timer {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 500px;
+            margin: 30px auto;
+            box-shadow: 0 10px 40px rgba(239, 68, 68, 0.4);
+            text-align: center;
+        }
+
+        .countdown-timer > p:first-child {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        #timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        .timer-segment {
+            background: rgba(255,255,255,0.2);
+            padding: 15px 10px;
+            border-radius: 10px;
+            min-width: 70px;
+            backdrop-filter: blur(10px);
+        }
+
+        .timer-number {
+            font-size: 2.5rem;
+            display: block;
+            line-height: 1;
+        }
+
+        .timer-unit {
+            font-size: 0.7rem;
+            display: block;
+            margin-top: 5px;
+            opacity: 0.9;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .timer-action {
+            font-size: 0.95rem;
+            margin-top: 15px;
+            opacity: 0.95;
+        }
+
+        /* SPOTS INDICATOR - NUEVO */
+        .spots-indicator {
+            background: linear-gradient(135deg, #0f9d58 0%, #0c7d46 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            margin: 30px auto;
+            box-shadow: 0 10px 40px rgba(15, 157, 88, 0.3);
+            text-align: center;
+        }
+
+        .spots-indicator > p:first-child {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .spots-indicator strong {
+            color: #fbbf24;
+            font-size: 1.4rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+            border-radius: 15px;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .small-text {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        /* URGENCY COMBO BOX - NUEVO */
+        .urgency-combo {
+            background: white;
+            border: 3px solid #ef4444;
+            border-radius: 20px;
+            padding: 40px 30px;
+            max-width: 600px;
+            margin: 40px auto;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+        }
+
+        .urgency-combo h3 {
+            color: #ef4444;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
         .cta-button {
-            background-color: var(--primary);
+            background-color: var(--accent);
             color: white;
             padding: 18px 40px;
             font-size: 1.2rem;
@@ -181,17 +366,16 @@
             border-radius: 50px;
             transition: transform 0.2s, background 0.3s;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(15, 157, 88, 0.4);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
             max-width: 90%;
             cursor: pointer;
         }
 
         .cta-button:hover { 
             transform: scale(1.05); 
-            background-color: #0c7d46; 
+            background-color: #d97706; 
         }
 
-        /* Evento de tracking */
         .cta-button:active {
             transform: scale(0.98);
         }
@@ -351,7 +535,7 @@
             font-weight: bold;
         }
 
-        /* INSTRUCTOR SECTION - MEJORADA */
+        /* INSTRUCTOR SECTION */
         .instructor-section { 
             background-color: var(--dark); 
             color: white; 
@@ -421,7 +605,7 @@
             color: white;
         }
 
-        /* FAQ SECTION - NUEVA */
+        /* FAQ SECTION */
         .faq-section {
             background: white;
             padding: 60px 20px;
@@ -476,7 +660,7 @@
             transform: rotate(180deg);
         }
 
-        /* URGENCY BOX - NUEVA */
+        /* URGENCY BOX */
         .urgency-section {
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
             color: white;
@@ -511,7 +695,7 @@
             margin-bottom: 5px;
         }
 
-        /* LEAD MAGNET - NUEVO */
+        /* LEAD MAGNET */
         .lead-magnet-section {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
@@ -630,6 +814,28 @@
             .urgency-grid {
                 grid-template-columns: 1fr;
             }
+            #timer {
+                gap: 10px;
+            }
+            .timer-segment {
+                min-width: 60px;
+                padding: 10px 5px;
+            }
+            .timer-number {
+                font-size: 2rem;
+            }
+            .course-info-box {
+                padding: 20px;
+            }
+            .date-item {
+                padding: 15px;
+            }
+            .date-icon {
+                font-size: 1.5rem;
+            }
+            .date-details strong {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -640,9 +846,6 @@
         <img src="logo.jpeg" alt="Curso Experto Google Sheets - Aprende hojas de cálculo profesionales">
     </div>
     <div class="nav-links">
-        <a href="https://pedroivanmedina.github.io/contenidoSheets/" target="_blank">
-            <i class="fas fa-book"></i> Temario
-        </a>
         <a href="https://claude.ai/public/artifacts/4a7d379b-55f1-4b1a-9d23-88ea8dd180cd" target="_blank">
             <i class="fas fa-file-user"></i> Mi CV
         </a>
@@ -656,7 +859,7 @@
     <h1>Deja de usar Excel.<br>Domina <span class="highlight">Google Sheets</span> como un profesional.</h1>
     <p class="subheadline">Transforma datos en decisiones. Convierte hojas de cálculo básicas en herramientas empresariales que automatizan, analizan y multiplican tu productividad.</p>
     
-    <!-- VALUE PROPOSITION BOX - NUEVO -->
+    <!-- VALUE PROPOSITION BOX -->
     <div class="value-prop-box">
         <div class="value-prop-grid">
             <div class="value-item">
@@ -671,7 +874,7 @@
             </div>
             <div class="value-item">
                 <span class="icon">🏆</span>
-                <strong>Diploma</strong>
+                <strong>Certificado</strong>
                 <p>Al finalizar el curso</p>
             </div>
             <div class="value-item">
@@ -684,12 +887,74 @@
         <div class="price-highlight">
             <span class="old-price">$1,250 MXN + IVA</span>
             <span class="new-price">$999 MXN</span>
-            <span class="urgency-text">🔥 Solo pagando HOY</span>
+            <span class="urgency-text">🔥 Oferta Especial de Lanzamiento</span>
+        </div>
+    </div>
+    
+    <!-- COURSE INFO BOX - NUEVO -->
+    <div class="course-info-box">
+        <h3 style="font-size: 1.4rem; margin-bottom: 20px; color: white;">📅 Próximo Grupo - Febrero 2026</h3>
+        <div class="course-dates">
+            <div class="date-item">
+                <span class="date-icon">📆</span>
+                <div class="date-details">
+                    <strong>26, 27 y 28 de Febrero 2026</strong>
+                    <span>3 sesiones en vivo</span>
+                </div>
+            </div>
+            <div class="date-item">
+                <span class="date-icon">🕐</span>
+                <div class="date-details">
+                    <strong>Jue. y Vie. 6:00 PM | Sáb. 11:00 AM</strong>
+                    <span>Horario CDMX (Hora del Centro)</span>
+                </div>
+            </div>
+            <div class="date-item">
+                <span class="date-icon">🎥</span>
+                <div class="date-details">
+                    <strong>Acceso a grabaciones por 100 días</strong>
+                    <span>Repite el curso tantas veces como quieras</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- URGENCY COMBO BOX - NUEVO -->
+    <div class="urgency-combo">
+        <h3>⚠️ Oferta por Tiempo Limitado</h3>
+        
+        <!-- COUNTDOWN TIMER -->
+        <div class="countdown-timer">
+            <p>⏰ Esta oferta vence en:</p>
+            <div id="timer">
+                <div class="timer-segment">
+                    <span class="timer-number" id="hours">23</span>
+                    <span class="timer-unit">Horas</span>
+                </div>
+                <div class="timer-segment">
+                    <span class="timer-number" id="minutes">59</span>
+                    <span class="timer-unit">Minutos</span>
+                </div>
+                <div class="timer-segment">
+                    <span class="timer-number" id="seconds">59</span>
+                    <span class="timer-unit">Segundos</span>
+                </div>
+            </div>
+            <p class="timer-action">Después vuelve a precio regular: $1,250 MXN</p>
+        </div>
+
+        <!-- SPOTS INDICATOR -->
+        <div class="spots-indicator">
+            <p>📊 Solo quedan <strong id="spotsLeft">7 lugares</strong> de 20 disponibles</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar" style="width: 35%">35%</div>
+            </div>
+            <p class="small-text">⚡ Último grupo se llenó en 4 días</p>
         </div>
     </div>
     
     <a href="#registro" class="cta-button" onclick="trackEvent('click', 'cta_hero', 'hero_section')">
-        QUIERO DOMINAR GOOGLE SHEETS AHORA
+        APARTAR MI LUGAR AHORA - $999 MXN
     </a>
 </header>
 
@@ -815,7 +1080,7 @@
     </div>
 </div>
 
-<!-- INSTRUCTOR SECTION MEJORADA -->
+<!-- INSTRUCTOR SECTION -->
 <div class="instructor-section">
     <div class="container">
         <div class="instructor-flex-container">
@@ -829,8 +1094,8 @@
                 <!-- ESTADÍSTICAS DEL INSTRUCTOR -->
                 <div class="instructor-stats">
                     <div class="stat-item">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">Cursos Impartidos</span>
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Alumnos Capacitados</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">100%</span>
@@ -850,7 +1115,7 @@
     </div>
 </div>
 
-<!-- FAQ SECTION - NUEVA -->
+<!-- FAQ SECTION -->
 <div class="faq-section">
     <div class="container">
         <h2 style="text-align: center; margin-bottom: 40px; color: var(--dark);">Preguntas Frecuentes</h2>
@@ -908,33 +1173,7 @@
     </div>
 </div>
 
-<!-- URGENCY SECTION - NUEVA -->
-<div class="urgency-section">
-    <div class="container">
-        <h2 style="font-size: 2.2rem; margin-bottom: 15px;">🎯 Próximo Curso: Experto ChatGPT</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 30px;">Marzo 2026 - Cupo limitado</p>
-        
-        <div class="urgency-grid">
-            <div class="urgency-item">
-                <span class="icon">🎁</span>
-                <strong>Precio Especial HOY</strong>
-                <p>Paga solo $999 MXN<br>(Precio regular $1,250 + IVA)</p>
-            </div>
-            <div class="urgency-item">
-                <span class="icon">👥</span>
-                <strong>Cupo Limitado</strong>
-                <p>Inscríbete ahora para<br>garantizar tu lugar</p>
-            </div>
-            <div class="urgency-item">
-                <span class="icon">⏰</span>
-                <strong>Oferta por Tiempo Limitado</strong>
-                <p>El precio aumenta<br>mañana a $1,250</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- LEAD MAGNET SECTION - NUEVA -->
+<!-- LEAD MAGNET SECTION -->
 <div class="lead-magnet-section">
     <div class="container">
         <h2 style="font-size: 2rem; margin-bottom: 20px;">🎁 Bonus Gratuito</h2>
@@ -953,17 +1192,17 @@
 <div class="final-cta" id="registro">
     <h2>Los datos son el nuevo petróleo.</h2>
     <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Quien domina las herramientas para <strong>analizarlos y automatizarlos</strong> tiene una ventaja competitiva imbatible.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSemYuen_Rb1M5556Z8oSoSyXLbXAgB7Ohij6jSbpkmbxUJY7w/viewform" class="cta-button" style="background-color: var(--accent);" onclick="trackEvent('click', 'cta_final', 'registration_section')">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSemYuen_Rb1M5556Z8oSoSyXLbXAgB7Ohij6jSbpkmbxUJY7w/viewform" class="cta-button" onclick="trackEvent('click', 'cta_final', 'registration_section')">
         APARTAR MI LUGAR AHORA - $999 MXN
     </a>
-    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">✓ Garantía de satisfacción &nbsp;|&nbsp; ✓ Cupo limitado &nbsp;|&nbsp; ✓ Grupo WhatsApp incluido</p>
+    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">✓ Garantía de satisfacción &nbsp;|&nbsp; ✓ Solo 7 lugares disponibles &nbsp;|&nbsp; ✓ Grupo WhatsApp incluido</p>
 </div>
 
 <div class="portfolio-section">
     <div class="container">
         <h3 style="text-align: center; color: var(--text-gray); margin-bottom: 25px;">Recursos Adicionales</h3>
         <div class="portfolio-grid">
-            <a href="https://pedroivanmedina.github.io/contenidoSheets/" class="portfolio-link" target="_blank" onclick="trackEvent('click', 'resource_content', 'resources_section')">
+            <a href="https://claude.ai/public/artifacts/46f86be3-baae-48ed-a47e-15ec28146627" class="portfolio-link" target="_blank" onclick="trackEvent('click', 'resource_content', 'resources_section')">
                 📚 Contenido Temático
             </a>
             <a href="https://claude.ai/public/artifacts/594c90da-6b07-4cb5-a9a8-fc4e7efa8415" class="portfolio-link" target="_blank" onclick="trackEvent('click', 'resource_problems', 'resources_section')">
@@ -983,7 +1222,7 @@
     </p>
 </footer>
 
-<!-- JAVASCRIPT PARA FAQ Y TRACKING -->
+<!-- JAVASCRIPT PARA FAQ, TRACKING Y COUNTDOWN -->
 <script>
     // Toggle FAQ
     function toggleFAQ(element) {
@@ -1006,6 +1245,74 @@
         }
     }
 
+    // COUNTDOWN TIMER FUNCIONAL
+    function initCountdown() {
+        // Calcular el tiempo final (24 horas desde ahora)
+        const now = new Date().getTime();
+        const countdownEnd = now + (24 * 60 * 60 * 1000); // 24 horas en milisegundos
+        
+        // Guardar en localStorage para que persista entre recargas
+        if (!localStorage.getItem('countdownEnd')) {
+            localStorage.setItem('countdownEnd', countdownEnd);
+        }
+        
+        const savedEnd = localStorage.getItem('countdownEnd');
+        
+        // Actualizar el countdown cada segundo
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = savedEnd - now;
+            
+            // Calcular horas, minutos y segundos
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Actualizar los elementos
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            // Si el countdown llega a 0, reiniciarlo
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                localStorage.removeItem('countdownEnd');
+                initCountdown(); // Reiniciar
+            }
+        }, 1000);
+    }
+    
+    // SPOTS INDICATOR DINÁMICO
+    function updateSpots() {
+        // Simular que los lugares se van llenando (esto lo puedes conectar a tu backend real)
+        const totalSpots = 20;
+        let spotsLeft = parseInt(localStorage.getItem('spotsLeft')) || 7;
+        
+        // Reducir un lugar cada X minutos (simulado)
+        const lastUpdate = localStorage.getItem('lastSpotUpdate');
+        const now = new Date().getTime();
+        
+        if (!lastUpdate || now - lastUpdate > 30 * 60 * 1000) { // cada 30 minutos
+            if (spotsLeft > 3) { // mantener mínimo 3 lugares
+                spotsLeft--;
+                localStorage.setItem('spotsLeft', spotsLeft);
+                localStorage.setItem('lastSpotUpdate', now);
+            }
+        }
+        
+        // Actualizar UI
+        document.getElementById('spotsLeft').textContent = spotsLeft + ' lugares';
+        const percentage = ((totalSpots - spotsLeft) / totalSpots * 100).toFixed(0);
+        const progressBar = document.getElementById('progressBar');
+        progressBar.style.width = percentage + '%';
+        progressBar.textContent = percentage + '%';
+        
+        // Track cuando quedan pocos lugares
+        if (spotsLeft <= 5) {
+            trackEvent('urgency', 'low_spots', spotsLeft + '_spots_left');
+        }
+    }
+
     // Función de tracking de eventos
     function trackEvent(action, category, label) {
         // Google Analytics
@@ -1018,8 +1325,6 @@
         
         // Consola para debug
         console.log('Event tracked:', action, category, label);
-        
-        // Aquí puedes agregar otros trackers (Facebook Pixel, etc.)
     }
 
     // Track scroll depth
@@ -1053,6 +1358,30 @@
             trackEvent('engagement', 'time_on_page', '2_minutes');
         }
     }, 10000); // Cada 10 segundos
+    
+    // Inicializar al cargar la página
+    document.addEventListener('DOMContentLoaded', function() {
+        initCountdown();
+        updateSpots();
+        
+        // Actualizar spots cada minuto
+        setInterval(updateSpots, 60000);
+        
+        // Track cuando el usuario ve el timer
+        const timerObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    trackEvent('view', 'countdown_timer', 'timer_viewed');
+                    timerObserver.disconnect();
+                }
+            });
+        });
+        
+        const timerElement = document.getElementById('timer');
+        if (timerElement) {
+            timerObserver.observe(timerElement);
+        }
+    });
 </script>
 
 </body>

@@ -177,7 +177,7 @@
             letter-spacing: 1px;
         }
 
-        /* COURSE INFO BOX - NUEVO */
+        /* COURSE INFO BOX */
         .course-info-box {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             border: 2px solid var(--primary);
@@ -236,7 +236,7 @@
             opacity: 0.8;
         }
 
-        /* COUNTDOWN TIMER - NUEVO */
+        /* COUNTDOWN TIMER */
         .countdown-timer {
             background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
             color: white;
@@ -292,7 +292,7 @@
             opacity: 0.95;
         }
 
-        /* SPOTS INDICATOR - NUEVO */
+        /* SPOTS INDICATOR */
         .spots-indicator {
             background: linear-gradient(135deg, #0f9d58 0%, #0c7d46 100%);
             color: white;
@@ -344,7 +344,7 @@
             margin-top: 10px;
         }
 
-        /* URGENCY COMBO BOX - NUEVO */
+        /* URGENCY COMBO BOX */
         .urgency-combo {
             background: white;
             border: 3px solid #ef4444;
@@ -903,21 +903,21 @@
         </div>
     </div>
     
-    <!-- COURSE INFO BOX - NUEVO -->
+    <!-- COURSE INFO BOX -->
     <div class="course-info-box">
-        <h3 style="font-size: 1.4rem; margin-bottom: 20px; color: white;">📅 Próximo Grupo - Febrero 2026</h3>
+        <h3 style="font-size: 1.4rem; margin-bottom: 20px; color: white;">📅 Próximo Grupo - Marzo 2026</h3>
         <div class="course-dates">
             <div class="date-item">
                 <span class="date-icon">📆</span>
                 <div class="date-details">
-                    <strong>26, 27 y 28 de Febrero 2026</strong>
+                    <strong>3, 4 y 5 de Marzo 2026</strong>
                     <span>3 sesiones en vivo</span>
                 </div>
             </div>
             <div class="date-item">
                 <span class="date-icon">🕐</span>
                 <div class="date-details">
-                    <strong>Jue. y Vie. 6:00 PM | Sáb. 11:00 AM</strong>
+                    <strong>Mar., Mié. y Jue. 6PM CDMX</strong>
                     <span>Horario CDMX (Hora del Centro)</span>
                 </div>
             </div>
@@ -931,7 +931,7 @@
         </div>
     </div>
 
-    <!-- URGENCY COMBO BOX - NUEVO -->
+    <!-- URGENCY COMBO BOX -->
     <div class="urgency-combo">
         <h3>⚠️ Oferta por Tiempo Limitado</h3>
         
@@ -1241,17 +1241,14 @@
         const faqItem = element.parentElement;
         const allFaqs = document.querySelectorAll('.faq-item');
         
-        // Cerrar otros FAQs
         allFaqs.forEach(item => {
             if (item !== faqItem) {
                 item.classList.remove('active');
             }
         });
         
-        // Toggle actual
         faqItem.classList.toggle('active');
         
-        // Track evento
         if (faqItem.classList.contains('active')) {
             trackEvent('expand', 'faq', element.querySelector('span').textContent);
         }
@@ -1259,93 +1256,73 @@
 
     // COUNTDOWN TIMER FUNCIONAL
     function initCountdown() {
-        // Calcular el tiempo final (24 horas desde ahora)
         const now = new Date().getTime();
-        const countdownEnd = now + (24 * 60 * 60 * 1000); // 24 horas en milisegundos
+        const countdownEnd = now + (24 * 60 * 60 * 1000);
         
-        // Guardar en localStorage para que persista entre recargas
         if (!localStorage.getItem('countdownEnd')) {
             localStorage.setItem('countdownEnd', countdownEnd);
         }
         
         const savedEnd = localStorage.getItem('countdownEnd');
         
-        // Actualizar el countdown cada segundo
         const countdownInterval = setInterval(function() {
             const now = new Date().getTime();
             const distance = savedEnd - now;
             
-            // Calcular horas, minutos y segundos
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
-            // Actualizar los elementos
             document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
             document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
             document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
             
-            // Si el countdown llega a 0, reiniciarlo
             if (distance < 0) {
                 clearInterval(countdownInterval);
                 localStorage.removeItem('countdownEnd');
-                initCountdown(); // Reiniciar
+                initCountdown();
             }
         }, 1000);
     }
     
     // SPOTS INDICATOR DINÁMICO
     function updateSpots() {
-        // Simular que los lugares se van llenando (esto lo puedes conectar a tu backend real)
         const totalSpots = 20;
         let spotsLeft = parseInt(localStorage.getItem('spotsLeft')) || 7;
         
-        // Reducir un lugar cada X minutos (simulado)
         const lastUpdate = localStorage.getItem('lastSpotUpdate');
         const now = new Date().getTime();
         
-        if (!lastUpdate || now - lastUpdate > 30 * 60 * 1000) { // cada 30 minutos
-            if (spotsLeft > 3) { // mantener mínimo 3 lugares
+        if (!lastUpdate || now - lastUpdate > 30 * 60 * 1000) {
+            if (spotsLeft > 3) {
                 spotsLeft--;
                 localStorage.setItem('spotsLeft', spotsLeft);
                 localStorage.setItem('lastSpotUpdate', now);
             }
         }
         
-        // Actualizar UI
         document.getElementById('spotsLeft').textContent = spotsLeft + ' lugares';
         const percentage = ((totalSpots - spotsLeft) / totalSpots * 100).toFixed(0);
         const progressBar = document.getElementById('progressBar');
         progressBar.style.width = percentage + '%';
         progressBar.textContent = percentage + '%';
         
-        // Track cuando quedan pocos lugares
         if (spotsLeft <= 5) {
             trackEvent('urgency', 'low_spots', spotsLeft + '_spots_left');
         }
     }
 
-    // Función de tracking de eventos
     function trackEvent(action, category, label) {
-        // Google Analytics
         if (typeof gtag !== 'undefined') {
             gtag('event', action, {
                 'event_category': category,
                 'event_label': label
             });
         }
-        
-        // Consola para debug
         console.log('Event tracked:', action, category, label);
     }
 
-    // Track scroll depth
-    let scrollTracked = {
-        25: false,
-        50: false,
-        75: false,
-        100: false
-    };
+    let scrollTracked = { 25: false, 50: false, 75: false, 100: false };
 
     window.addEventListener('scroll', function() {
         const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
@@ -1358,28 +1335,20 @@
         });
     });
 
-    // Track time on page
     let timeOnPage = 0;
     setInterval(function() {
         timeOnPage += 10;
-        if (timeOnPage === 30) {
-            trackEvent('engagement', 'time_on_page', '30_seconds');
-        } else if (timeOnPage === 60) {
-            trackEvent('engagement', 'time_on_page', '1_minute');
-        } else if (timeOnPage === 120) {
-            trackEvent('engagement', 'time_on_page', '2_minutes');
-        }
-    }, 10000); // Cada 10 segundos
+        if (timeOnPage === 30) trackEvent('engagement', 'time_on_page', '30_seconds');
+        else if (timeOnPage === 60) trackEvent('engagement', 'time_on_page', '1_minute');
+        else if (timeOnPage === 120) trackEvent('engagement', 'time_on_page', '2_minutes');
+    }, 10000);
     
-    // Inicializar al cargar la página
     document.addEventListener('DOMContentLoaded', function() {
         initCountdown();
         updateSpots();
         
-        // Actualizar spots cada minuto
         setInterval(updateSpots, 60000);
         
-        // Track cuando el usuario ve el timer
         const timerObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {

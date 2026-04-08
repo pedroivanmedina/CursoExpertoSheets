@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aprende Google Sheets desde cero. Curso práctico de 3 sesiones con automatización, fórmulas avanzadas y dashboards profesionales. Diploma incluido. Inscríbete hoy por $999 MXN.">
+    <meta name="description" content="Aprende Google Sheets desde cero. Curso práctico de 3 sesiones con automatización, fórmulas avanzadas y dashboards profesionales. Diploma incluido. Inscríbete hoy por $990 MXN.">
     <meta name="keywords" content="curso google sheets, aprender sheets, google sheets méxico, curso hojas de cálculo, automatización sheets">
     <title>Curso Experto en Google Sheets | Domina las Hojas de Cálculo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -796,6 +796,117 @@
         }
 
         /* Media Queries */
+        /* MOBILE FLOATING CTA */
+        .mobile-cta-float {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+            text-align: center;
+            border-top: 2px solid var(--accent);
+        }
+        .mobile-cta-float a {
+            display: block;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(245,158,11,0.4);
+        }
+        .mobile-cta-float .float-price {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-top: 2px;
+        }
+        @media (max-width: 768px) {
+            .mobile-cta-float { display: block; }
+            body { padding-bottom: 80px; }
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2f1 100%);
+            padding: 60px 20px;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 40px auto 0;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.15;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        .testimonial-stars {
+            color: #f59e0b;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .testimonial-text {
+            color: var(--text-gray);
+            font-size: 0.97rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: white;
+            flex-shrink: 0;
+        }
+        .author-name {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 0.95rem;
+        }
+        .author-role {
+            font-size: 0.82rem;
+            color: #64748b;
+            margin-top: 2px;
+        }
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .navbar { 
@@ -898,26 +1009,26 @@
         
         <div class="price-highlight">
             <span class="old-price">$1,250 MXN + IVA</span>
-            <span class="new-price">$999 MXN</span>
+            <span class="new-price">$990 MXN</span>
             <span class="urgency-text">🔥 Oferta Especial de Lanzamiento</span>
         </div>
     </div>
     
     <!-- COURSE INFO BOX -->
     <div class="course-info-box">
-        <h3 style="font-size: 1.4rem; margin-bottom: 20px; color: white;">📅 Próximo Grupo - Marzo 2026</h3>
+        <h3 style="font-size: 1.4rem; margin-bottom: 20px; color: white;">📅 Próximo Grupo - Abril 2026</h3>
         <div class="course-dates">
             <div class="date-item">
                 <span class="date-icon">📆</span>
                 <div class="date-details">
-                    <strong>3, 4 y 5 de Marzo 2026</strong>
+                    <strong>21, 22 y 23 de Abril 2026</strong>
                     <span>3 sesiones en vivo</span>
                 </div>
             </div>
             <div class="date-item">
                 <span class="date-icon">🕐</span>
                 <div class="date-details">
-                    <strong>Mar., Mié. y Jue. 6PM CDMX</strong>
+                    <strong>Lun., Mar. y Mié. 6PM CDMX</strong>
                     <span>Horario CDMX (Hora del Centro)</span>
                 </div>
             </div>
@@ -937,7 +1048,7 @@
         
         <!-- COUNTDOWN TIMER -->
         <div class="countdown-timer">
-            <p>⏰ Esta oferta vence en:</p>
+            <p>⏰ El curso comienza en:</p>
             <div id="timer">
                 <div class="timer-segment">
                     <span class="timer-number" id="hours">23</span>
@@ -952,7 +1063,7 @@
                     <span class="timer-unit">Segundos</span>
                 </div>
             </div>
-            <p class="timer-action">Después vuelve a precio regular: $1,250 MXN</p>
+            <p class="timer-action">📅 21, 22 y 23 de Abril · 6 PM CDMX</p>
         </div>
 
         <!-- SPOTS INDICATOR -->
@@ -966,7 +1077,7 @@
     </div>
     
     <a href="#registro" class="cta-button" onclick="trackEvent('click', 'cta_hero', 'hero_section')">
-        APARTAR MI LUGAR AHORA - $999 MXN
+        APARTAR MI LUGAR AHORA - $990 MXN
     </a>
 </header>
 
@@ -1178,7 +1289,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Las fechas se coordinan con el grupo inscrito para asegurar la máxima participación. Al registrarte, recibirás el calendario completo.</p>
+                    <p>El próximo grupo inicia el <strong>lunes 21 de Abril de 2026</strong>, con sesiones el 21, 22 y 23 de Abril a las 6 PM hora CDMX. Al registrarte recibirás el link de acceso a las sesiones en vivo por correo electrónico.</p>
                 </div>
             </div>
         </div>
@@ -1193,10 +1304,10 @@
             <div class="magnet-icon">📥</div>
             <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Guía de las 10 Fórmulas Esenciales</h3>
             <p style="margin-bottom: 20px;">Descarga gratis la guía que todo profesional necesita para empezar a dominar Google Sheets. Incluye ejemplos prácticos y plantillas listas para usar.</p>
-            <a href="#" class="download-button" onclick="alert('Esta función se implementará próximamente. Por ahora contáctanos por WhatsApp.'); trackEvent('click', 'lead_magnet', 'download_button'); return false;">
-                DESCARGAR GUÍA GRATIS
+            <a href="https://wa.me/message/JG7VSAITBDBVO1?text=Hola%20Pedro%2C%20me%20interesa%20recibir%20la%20Gu%C3%ADa%20de%20las%2010%20F%C3%B3rmulas%20Esenciales%20de%20Google%20Sheets%20%F0%9F%93%8A" class="download-button" target="_blank" onclick="trackEvent('click', 'lead_magnet', 'whatsapp_redirect')">
+                RECIBIR GUÍA POR WHATSAPP
             </a>
-            <p style="font-size: 0.85rem; margin-top: 15px; opacity: 0.8;">* Próximamente disponible</p>
+            <p style="font-size: 0.85rem; margin-top: 15px; opacity: 0.8;">* Te la enviamos directo a tu WhatsApp</p>
         </div>
     </div>
 </div>
@@ -1205,7 +1316,7 @@
     <h2>Los datos son el nuevo petróleo.</h2>
     <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">Quien domina las herramientas para <strong>analizarlos y automatizarlos</strong> tiene una ventaja competitiva imbatible.</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSemYuen_Rb1M5556Z8oSoSyXLbXAgB7Ohij6jSbpkmbxUJY7w/viewform" class="cta-button" onclick="trackEvent('click', 'cta_final', 'registration_section')">
-        APARTAR MI LUGAR AHORA - $999 MXN
+        APARTAR MI LUGAR AHORA - $990 MXN
     </a>
     <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">✓ Garantía de satisfacción &nbsp;|&nbsp; ✓ Solo 7 lugares disponibles &nbsp;|&nbsp; ✓ Grupo WhatsApp incluido</p>
 </div>
@@ -1222,6 +1333,96 @@
             </a>
         </div>
     </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials-section">
+    <div style="text-align:center;">
+        <h2 style="color: var(--dark); font-size: 2rem; margin-bottom: 10px;">Lo que dicen nuestros alumnos</h2>
+        <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto;">Profesionistas y empresarios que ya transformaron su forma de trabajar con datos</p>
+    </div>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">Llevaba años usando Excel y tenía mucho miedo de migrar. Pedro explica todo de forma muy clara y práctica. En la primera sesión ya estaba compartiendo archivos y colaborando con mi equipo en tiempo real. Fue un antes y después.</p>
+            <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #0f9d58, #14b8a6);">M</div>
+                <div>
+                    <div class="author-name">Martha Lizárraga</div>
+                    <div class="author-role">Gerente Administrativa · Culiacán</div>
+                    <span class="testimonial-badge">✓ Alumna verificada</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">La función QUERY me cambió la vida. Antes tardaba horas generando reportes de ventas manualmente. Ahora los tengo listos en segundos. El curso vale mucho más de lo que cuesta, sin duda la mejor inversión del año para mi negocio.</p>
+            <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #7c3aed, #a78bfa);">R</div>
+                <div>
+                    <div class="author-name">Roberto Félix</div>
+                    <div class="author-role">Director Comercial · Los Mochis</div>
+                    <span class="testimonial-badge">✓ Alumno verificado</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">Tomé el curso para aprender a hacer dashboards para mis clientes. Salí con herramientas que no esperaba: ARRAYFORMULA, tablas dinámicas y hasta conectar Sheets con Looker Studio. Pedro domina el tema y lo enseña con mucha paciencia.</p>
+            <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #ea580c, #fb923c);">A</div>
+                <div>
+                    <div class="author-name">Alejandra Torres</div>
+                    <div class="author-role">Consultora Independiente · Mazatlán</div>
+                    <span class="testimonial-badge">✓ Alumna verificada</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">Muy buen ritmo, nunca me sentí perdido. Los ejercicios son casos reales de empresa, no ejemplos genéricos. Al terminar el curso presenté un tablero de indicadores a mi director y quedó muy impresionado. Recomendado 100%.</p>
+            <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #0284c7, #38bdf8);">C</div>
+                <div>
+                    <div class="author-name">Carlos Ibarra</div>
+                    <div class="author-role">Analista de Operaciones · Culiacán</div>
+                    <span class="testimonial-badge">✓ Alumno verificado</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">Lo que más me gustó fue el grupo de WhatsApp después del curso. Tuve dudas semanas después y Pedro las resolvió al momento. No es solo un curso, es un acompañamiento real. Mis reportes mensuales ahora se generan solos.</p>
+            <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #db2777, #f472b6);">L</div>
+                <div>
+                    <div class="author-name">Laura Angulo</div>
+                    <div class="author-role">Coordinadora de RRHH · Culiacán</div>
+                    <span class="testimonial-badge">✓ Alumna verificada</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">Pensé que iba a ser muy técnico y aburrido, pero Pedro lo hace muy dinámico. Aprendí más en 3 sesiones que en meses de tutoriales en YouTube. La parte de validaciones y protección de datos fue justo lo que necesitaba para mi empresa.</p>
+            <div class="testimonial-author">
+                <div class="author-avatar" style="background: linear-gradient(135deg, #059669, #34d399);">J</div>
+                <div>
+                    <div class="author-name">Jorge Valenzuela</div>
+                    <div class="author-role">Dueño de PYME · Guasave</div>
+                    <span class="testimonial-badge">✓ Alumno verificado</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MOBILE FLOATING CTA -->
+<div class="mobile-cta-float" id="mobileCta">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSemYuen_Rb1M5556Z8oSoSyXLbXAgB7Ohij6jSbpkmbxUJY7w/viewform" onclick="trackEvent('click', 'cta_mobile_float', 'mobile_floating_button')">
+        🎓 APARTAR MI LUGAR — $990 MXN
+        <span class="float-price">📅 21, 22 y 23 de Abril · Solo 7 lugares</span>
+    </a>
 </div>
 
 <footer>
@@ -1254,34 +1455,39 @@
         }
     }
 
-    // COUNTDOWN TIMER FUNCIONAL
+    // COUNTDOWN TIMER — cuenta regresiva al inicio del curso: 21 de Abril 2026, 18:00 CDMX (UTC-6)
     function initCountdown() {
-        const now = new Date().getTime();
-        const countdownEnd = now + (24 * 60 * 60 * 1000);
-        
-        if (!localStorage.getItem('countdownEnd')) {
-            localStorage.setItem('countdownEnd', countdownEnd);
-        }
-        
-        const savedEnd = localStorage.getItem('countdownEnd');
-        
+        // Fecha fija: 21 Abril 2026 18:00 hora CDMX (UTC-6 = UTC+0 sería las 00:00 del 22)
+        const courseDate = new Date('2026-04-21T18:00:00-06:00').getTime();
+
         const countdownInterval = setInterval(function() {
             const now = new Date().getTime();
-            const distance = savedEnd - now;
-            
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const distance = courseDate - now;
+
+            if (distance <= 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                document.querySelector('.timer-action').textContent = '🎉 ¡El curso comienza hoy!';
+                return;
+            }
+
+            const days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-            
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                localStorage.removeItem('countdownEnd');
-                initCountdown();
+
+            // Mostrar días si quedan más de 24 horas
+            if (days > 0) {
+                document.getElementById('hours').textContent = days.toString().padStart(2, '0');
+                document.querySelector('#timer .timer-segment:first-child .timer-unit').textContent = 'Días';
+            } else {
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.querySelector('#timer .timer-segment:first-child .timer-unit').textContent = 'Horas';
             }
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent  = seconds.toString().padStart(2, '0');
         }, 1000);
     }
     

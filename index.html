@@ -907,6 +907,13 @@
             color: #64748b;
             margin-top: 2px;
         }
+        .testimonial-badge {
+            display: inline-block;
+            margin-top: 4px;
+            font-size: 0.75rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .navbar { 
@@ -966,13 +973,16 @@
         <img src="logo.jpeg" alt="Curso Experto Google Sheets - Aprende hojas de cálculo profesionales">
     </div>
     <div class="nav-links">
-        <a href="https://pedroivanmedina.github.io/CursoExpertoSheets/contenido.html" target="_blank">
+        <a href="https://pedroivanmedina.github.io/CursoExpertoSheets/contenido.html" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-book"></i> Contenido Temático
         </a>
-        <a href="https://pedroivanmedina.github.io/CursoExpertoSheets/cv.html" target="_blank">
-            <i class="fas fa-file-user"></i> Mi CV
+        <a href="https://pedroivanmedina.github.io/CursoExpertoSheets/cv.html" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-id-card"></i> Mi CV
         </a>
-        <a href="https://wa.me/message/JG7VSAITBDBVO1" target="_blank" style="color: #25D366;" onclick="trackEvent('click', 'whatsapp_nav', 'navigation')">
+        <a href="https://pedroivanmedina.github.io/CursoExpertoSheets/temario.pdf" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click', 'temario_nav', 'navigation')">
+            <i class="fas fa-file-pdf"></i> Temario PDF
+        </a>
+        <a href="https://wa.me/message/JG7VSAITBDBVO1" target="_blank" rel="noopener noreferrer" style="color: #25D366;" onclick="trackEvent('click', 'whatsapp_nav', 'navigation')">
             <i class="fab fa-whatsapp"></i> Contacto
         </a>
     </div>
@@ -1201,9 +1211,19 @@
             </ul>
         </div>
     </div>
-</div>
 
-<!-- INSTRUCTOR SECTION -->
+    <!-- DESCARGA DEL TEMARIO COMPLETO -->
+    <div style="text-align:center; margin-top: 40px;">
+        <p style="color: var(--text-gray); margin-bottom: 15px; font-size: 1rem;">¿Quieres ver el detalle completo de los temas?</p>
+        <a href="https://pedroivanmedina.github.io/CursoExpertoSheets/temario.pdf"
+           target="_blank" rel="noopener noreferrer"
+           class="download-button"
+           style="background: var(--dark); display: inline-flex; align-items: center; gap: 10px;"
+           onclick="trackEvent('click', 'temario_syllabus', 'syllabus_section')">
+            <i class="fas fa-file-pdf"></i> Descargar Temario Completo (PDF)
+        </a>
+    </div>
+</div>
 <div class="instructor-section">
     <div class="container">
         <div class="instructor-flex-container">
@@ -1325,10 +1345,13 @@
     <div class="container">
         <h3 style="text-align: center; color: var(--text-gray); margin-bottom: 25px;">Recursos Adicionales</h3>
         <div class="portfolio-grid">
-            <a href="https://pedroivanmedina.github.io/CursoExpertoSheets/contenido.html" class="portfolio-link" target="_blank" onclick="trackEvent('click', 'resource_content', 'resources_section')">
+            <a href="https://pedroivanmedina.github.io/CursoExpertoSheets/contenido.html" class="portfolio-link" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click', 'resource_content', 'resources_section')">
                 📚 Contenido Temático
             </a>
-            <a href="https://pedroivanmedina.github.io/CursoExpertoSheets/riesgos.html" class="portfolio-link" target="_blank" onclick="trackEvent('click', 'resource_problems', 'resources_section')">
+            <a href="https://pedroivanmedina.github.io/CursoExpertoSheets/temario.pdf" class="portfolio-link" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click', 'resource_temario', 'resources_section')">
+                📄 Temario PDF
+            </a>
+            <a href="https://pedroivanmedina.github.io/CursoExpertoSheets/riesgos.html" class="portfolio-link" target="_blank" rel="noopener noreferrer" onclick="trackEvent('click', 'resource_problems', 'resources_section')">
                 🎯 Riesgos y Miedos
             </a>
         </div>
@@ -1426,7 +1449,7 @@
 </div>
 
 <footer>
-    <p>&copy; 2025 Curso Experto en Google Sheets | Todos los derechos reservados</p>
+    <p>&copy; 2026 Curso Experto en Google Sheets | Todos los derechos reservados</p>
     <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8;">
         Culiacán, Sinaloa, México | 
         <a href="https://wa.me/message/JG7VSAITBDBVO1" style="color: #25D366; text-decoration: none;">
